@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import TopChoicesProduct from "./TopChoicesProduct";
+import ProductCard from "./ProductCard";
 
 function TopChoices() {
   const [products, setProducts] = useState([]);
@@ -31,7 +31,7 @@ function TopChoices() {
           </p>
         </article>
         {products.map((product, i) => (
-          <TopChoicesProduct product={product} key={i} />
+          <ProductCard product={product} key={i} />
         ))}
       </div>
     </section>

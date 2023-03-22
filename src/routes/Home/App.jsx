@@ -1,6 +1,6 @@
-import './App.css'
+import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavbarApp } from '../../components/NavbarApp'
+import {NavbarComp}  from '../../components/NavbarComp'
 import Carousel from '../../components/Carousel';
 import TopChoices from '../../components/TopChoices';
 import TopSales from '../../components/TopSales';
@@ -11,14 +11,14 @@ function App() {
 
   return (
     <>
-        <NavbarApp/>
+        <NavbarComp/>
         <Carousel/>
         <main>
           <TopChoices/>
           <TopSales/>
           <ShopHelp/>
-          <Footer />
         </main>
+        <Footer />
     </>
   )
 }
