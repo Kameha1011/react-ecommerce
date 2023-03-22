@@ -1,5 +1,3 @@
-import React from "react";
-
 function TopChoicesProduct({product}) {
   return (
     <article

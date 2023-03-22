@@ -5,17 +5,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FiShoppingCart } from "react-icons/fi";
-import "../App.css";
+
+const api_url = "https://fakestoreapi.com/products/categories"
 
 export const NavbarApp = () => {
   const [categories, setCategories] = useState([]);
   
   useEffect(() => {
-    console.log("ejele");
     const getCategories = async () => {
       try {
         await axios
-          .get("https://fakestoreapi.com/products/categories")
+          .get(api_url)
           .then((response) => {setCategories(response.data)});
       } catch (error) {
         console.log(error);

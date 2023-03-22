@@ -1,5 +1,3 @@
-import React from 'react'
-
 function TopSales() {
   return (
     <section className='container-fluid d-flex flex-column align-items-center justify-content-center text-light' id='TopSalesContainer'>
