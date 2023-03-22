@@ -6,10 +6,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FiShoppingCart } from "react-icons/fi";
 
-const api_url = "https://fakestoreapi.com/products/categories"
+// const api_url = "https://fakestoreapi.com/products/categories"
 
 export const NavbarApp = () => {
-  const [categories, setCategories] = useState([]);
+/*   const [categories, setCategories] = useState([]);
   
   useEffect(() => {
     const getCategories = async () => {
@@ -23,7 +23,7 @@ export const NavbarApp = () => {
     };
     getCategories();
   }, []);
-
+ */
   return (
     <Navbar collapseOnSelect variant="light" expand="lg">
       <Container>
@@ -33,14 +33,9 @@ export const NavbarApp = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav navbarScroll className="mx-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Store" id="basic-nav-dropdown">
-              {categories.map((category, i) => (
-                <NavDropdown.Item href="#" key={i}>
-                  {category[0].toUpperCase() + category.substring(1)}
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            <Nav.Link href="#tienda">Store</Nav.Link>
+            <Nav.Link href="#link">Contact Us</Nav.Link>
+            <Nav.Link href="#">About Us</Nav.Link>
           </Nav>
           <Nav.Link>
             <FiShoppingCart />

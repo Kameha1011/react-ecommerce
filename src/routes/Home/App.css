@@ -1,5 +1,9 @@
+#root{
+    min-height: 100vh;
+}
 nav{
     background-color: rgba(218, 165, 32);
+    font-size: 1.5rem;
 }
 #basic-navbar-nav .navbar-nav-scroll{
     max-height: 150px;
