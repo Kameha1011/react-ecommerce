@@ -44,7 +44,7 @@ export const NavbarComp = () => {
             <NavDropdown title='Shop'>
               {categories.map((category, i) => 
                   <NavDropdown.Item key={i}>
-                    <Link to={'/shop'} className='nav-link'>{`${category.charAt(0).toUpperCase()}${category.slice(1)}`}</Link>
+                    <Link to={`/shop/${category}`} className='nav-link'>{`${category.charAt(0).toUpperCase()}${category.slice(1)}`}</Link>
                   </NavDropdown.Item>
               )}
             </NavDropdown>
