@@ -20,13 +20,14 @@ header{
 .carousel-inner{
     height: 100%;
 }
-.carousel-inner .carousel-caption{
-    background-color: #c3c3c39e;
-    min-height: 15rem;
-    bottom: 2rem;
-    left: 15%;
+.carousel-inner img{
+    object-position: right;
 }
-.carousel-inner h5{
+.carousel-inner .carousel-caption{
+    bottom: 3rem;
+}
+.carousel-inner .carousel-caption h1{
+    font-size: 4rem;
     letter-spacing: .2rem;
 }
 .TopChoicesHeading{
@@ -87,22 +88,24 @@ aside{
     width: 20%;
 }
 @media(min-width: 768px){
+    header{
+        height: 60vh;
+    }
     .carousel-inner .carousel-caption{
-        background-color: #c3c3c39e;
-        min-height: 15rem;
-        bottom: 18rem;
-        left: 15%;
+        max-width: 20rem;
+        left: 50%;
+        bottom: 15rem;
+    }
+    .carousel-inner .carousel-caption h1{
+        font-size: 5rem;
+        letter-spacing: .5rem;
     }
 }
 @media(min-width: 1024px){
     header{
         height: 90vh;
     }
-    .carousel-inner .carousel-caption{
-        bottom: 10rem;
-        left: 23%;
-        max-width: 50rem;
-    }
+ 
     .help{
         border-right: 1px solid black;
     }

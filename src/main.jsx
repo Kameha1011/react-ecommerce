@@ -7,6 +7,8 @@ import Error from "./Error";
 import ProductsContainer from "./components/ProductsContainer";
 import axios from "axios";
 
+//TODO: USAR LA API DE CONTEXT DE REACT PARA TENER EL ARRAY CON TODOS LOS PRODUCTOS
+//TODO: CAMBIAR IMAGENES DEL CARRUSEL Y PONERLE UNA IMAGEN DE FONDO A SALES
 const router = createBrowserRouter([
   {
     path: "/",

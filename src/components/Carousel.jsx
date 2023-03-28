@@ -1,23 +1,9 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import slide1 from '../assets/carousel/slide1.jpg';
+import slide2 from '../assets/carousel/slide2.jpg';
+import slide3 from '../assets/carousel/slide3.jpg';
 import Carousel from "react-bootstrap/Carousel";
 
 function Header() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        await axios
-          .get("https://fakestoreapi.com/products?limit=6")
-          .then((response) => {
-            setProducts(response.data);
-          });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getProducts();
-  }, []);
   return (
     <header>
       <Carousel
@@ -26,25 +12,48 @@ function Header() {
         interval={null}
         className="w-100 h-100"
       >
-        {products.map((product, i) => (
-          <Carousel.Item className="h-100" key={i}>
-            <img
-              className="d-block w-100 h-100 object-fit-contain"
-              src={product.image}
-              alt={product.title}
-            />
-            <Carousel.Caption className="text-dark">
-              <h5 className="text-uppercase text-warning mb-3">
-                {product.category}
-              </h5>
-              <h2 className="lh-2 mb-3">{product.title}</h2>
-              <p className="lead">{product.description}</p>
-              <a href="#" className="btn btn-outline-dark">
-                Ver productos
-              </a>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
+        <Carousel.Item className="h-100">
+          <img
+            className="d-block w-100 h-100 object-fit-contain"
+            src={slide1}
+            alt='slide1'
+          />
+          <Carousel.Caption className="text-dark text-end me-2">
+            <h1 className=" mb-3 display-1 fw-bold text-warning">Gold Chains</h1>
+            <p className="lead">Available now</p>
+            <a href="#" className="btn btn-outline-dark">
+              Ver productos
+            </a>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className="h-100">
+          <img
+            className="d-block w-100 h-100 object-fit-contain"
+            src={slide2}
+            alt='slide2'
+          />
+          <Carousel.Caption className="text-warning text-end me-2">
+            <h1 className=" mb-3 display-1 fw-bold text-warning">Gold Chains</h1>
+            <p className="lead">Available now</p>
+            <a href="#" className="btn btn-outline-light">
+              Ver productos
+            </a>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item className="h-100">
+          <img
+            className="d-block w-100 h-100 object-fit-contain"
+            src={slide3}
+            alt='slide3'
+          />
+          <Carousel.Caption className="text-dark text-end me-2">
+            <h1 className=" mb-3 display-1 fw-bold text-warning">Gold Chains</h1>
+            <p className="lead">Available now</p>
+            <a href="#" className="btn btn-outline-dark">
+              Ver productos
+            </a>
+          </Carousel.Caption>
+        </Carousel.Item>
       </Carousel>
     </header>
   );
