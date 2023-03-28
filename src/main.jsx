@@ -19,7 +19,6 @@ const router = createBrowserRouter([
     path: "/shop",
     element: <Shop />,
     errorElement: <Error />,
-
     children: [
       {
         path: "/shop/:categoryId",

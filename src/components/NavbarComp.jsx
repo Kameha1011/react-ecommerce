@@ -3,11 +3,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { FiShoppingCart } from "react-icons/fi";
-import { Link } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { FiShoppingCart } from "react-icons/fi";
+import { Link, Form } from "react-router-dom";
 import axios from "axios";
 
 
@@ -31,6 +29,7 @@ export const NavbarComp = () => {
     };
     getCategories();
   }, []);
+ 
   return (
     <Navbar collapseOnSelect variant="light" expand="lg">
       <Container>
@@ -51,15 +50,6 @@ export const NavbarComp = () => {
             <Nav.Link href="#link">Contact Us</Nav.Link>
             <Nav.Link href="#">About Us</Nav.Link>
           </Nav>
-          <Form className="d-flex me-auto">
-            <Form.Control
-              type="search"
-              placeholder="Search Products"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
           <Nav.Link onClick={handleShow}>
             <FiShoppingCart />
           </Nav.Link>

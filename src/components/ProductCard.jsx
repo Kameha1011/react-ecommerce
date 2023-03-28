@@ -13,7 +13,7 @@ function ProductCard({ product }) {
       <div className="p-3 d-flex flex-column ProductCardText ">
         <h3>
           {product.title}{" "}
-          <span class="badge bg-dark fs-6">{`${product.category
+          <span className="badge bg-dark fs-6">{`${product.category
             .charAt(0)
             .toUpperCase()}${product.category.slice(1)}`}</span>
         </h3>
