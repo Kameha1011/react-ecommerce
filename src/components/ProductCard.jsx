@@ -1,4 +1,9 @@
 function ProductCard({ product }) {
+
+  const handleClick = () => {
+      console.log('epale sans', product.title);
+  }
+
   return (
     <article className="col-12 col-md-5 col-lg-3 d-flex flex-column p-2 mb-3 ProductCard">
       <div>
@@ -18,7 +23,7 @@ function ProductCard({ product }) {
             .toUpperCase()}${product.category.slice(1)}`}</span>
         </h3>
         <p className="text-muted">${product.price}</p>
-        <a className="btn">SHOP NOW</a>
+        <a className="btn" onClick={handleClick}>SHOP NOW</a>
       </div>
     </article>
   );

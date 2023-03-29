@@ -6,6 +6,7 @@ import Shop from "./routes/Shop/Shop";
 import Error from "./Error";
 import ProductsContainer from "./components/ProductsContainer";
 import axios from "axios";
+import SingleProduct from "./components/SingleProduct";
 
 //TODO: USAR LA API DE CONTEXT DE REACT PARA TENER EL ARRAY CON TODOS LOS PRODUCTOS
 //TODO: CAMBIAR IMAGENES DEL CARRUSEL Y PONERLE UNA IMAGEN DE FONDO A SALES
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/shop/:categoryId",
+        path: "/shop/category/:categoryId",
         element: <ProductsContainer />,
         loader: async ({ params }) => {
           try {
@@ -29,6 +30,20 @@ const router = createBrowserRouter([
               .get(
                 `https://fakestoreapi.com/products/category/${params.categoryId}`
               )
+              .then((response) => response.data);
+          } catch (error) {
+            console.log(error);
+            return null;
+          }
+        },
+      },
+      {
+        path: "/shop/product/:productId",
+        element: <SingleProduct />,
+        loader: async ({ params }) => {
+          try {
+            return await axios
+              .get(`https://fakestoreapi.com/products/${params.productId}`)
               .then((response) => response.data);
           } catch (error) {
             console.log(error);
