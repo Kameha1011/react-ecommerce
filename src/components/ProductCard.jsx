@@ -6,8 +6,8 @@ function ProductCard({ product }) {
 
   return (
     <article className="col-12 col-md-5 col-lg-3 d-flex flex-column p-2 mb-3 ProductCard">
-      <div>
-        <a href="#">
+      <div onClick={handleClick}>
+        <a href={`/shop/product/${product.id}`}>
           <img
             src={product.image}
             alt={product.title}
@@ -23,7 +23,7 @@ function ProductCard({ product }) {
             .toUpperCase()}${product.category.slice(1)}`}</span>
         </h3>
         <p className="text-muted">${product.price}</p>
-        <a className="btn" onClick={handleClick}>SHOP NOW</a>
+        <a className="btn" href={`/shop/product/${product.id}`}>SHOP NOW</a>
       </div>
     </article>
   );

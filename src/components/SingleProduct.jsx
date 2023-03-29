@@ -19,8 +19,7 @@ function SingleProduct() {
 
         <div className="p-2 p-md-5" >
           <h2>{product.title}</h2>
-          <p className="text-secondary">{product.price}</p>
-          <small>{product.rating.count} Reviews</small>
+          <p className="text-secondary">{product.price}$</p>
           <p className="lead">
             {product.description}
           </p>
