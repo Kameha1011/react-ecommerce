@@ -7,9 +7,8 @@ import Error from "./Error";
 import ProductsContainer from "./components/ProductsContainer";
 import axios from "axios";
 import SingleProduct from "./components/SingleProduct";
+import { Contact } from "./routes/Contact/Contact";
 
-//TODO: USAR LA API DE CONTEXT DE REACT PARA TENER EL ARRAY CON TODOS LOS PRODUCTOS
-//TODO: CAMBIAR IMAGENES DEL CARRUSEL Y PONERLE UNA IMAGEN DE FONDO A SALES
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +52,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'/contact',
+    element: <Contact/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,7 +1,7 @@
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs"
 function Footer() {
   return (
-    <footer className="py-5 container-fluid ">
+    <footer className="py-5 container-fluid">
       <div className="row">
         <div className="col-6 col-md-2 mb-3">
           <h5>Section</h5>

@@ -23,8 +23,11 @@ function SingleProduct() {
           <p className="lead">
             {product.description}
           </p>
-          <input type="number" min='0' max='10' className="form-control w-25 d-inline mx-1" />
-          <button className="btn w-50">Add to cart</button>
+          <form action="">
+            <input type="number" min='0' max='10' className="form-control w-25 d-inline mx-1" />
+            <button className="btn w-50">Add to cart</button>
+          </form>
+          
         </div>
       </article>
     </section>

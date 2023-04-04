@@ -1,6 +1,9 @@
 #root{
     min-height: 100vh;
 }
+.contactContainer {
+    min-height: 60vh;
+}
 nav{
     background-color: rgba(218, 165, 32);
     font-size: 1.5rem;
