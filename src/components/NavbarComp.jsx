@@ -31,6 +31,7 @@ export const NavbarComp = () => {
     getCategories();
   }, []);
  const {cart, deleteProductFromCart } = useContext(CartContext)
+
   return (
     <Navbar collapseOnSelect variant="light" expand="lg">
       <Container>
@@ -64,11 +65,11 @@ export const NavbarComp = () => {
           {cart.map((cartItem) =>
             <div key={cartItem.product.id}>
             <p>{cartItem.product.title} ({cartItem.qty})</p>
-            <button className="btn btn-danger">Delete</button>
+            <button className="btn btn-danger" onClick={() => {
+              deleteProductFromCart(cartItem.product.id)
+            }}>Delete</button>
           </div>
           )}
-          
-
         </Offcanvas.Body>
       </Offcanvas>
     </Navbar>

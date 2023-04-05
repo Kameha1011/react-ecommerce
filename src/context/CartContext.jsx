@@ -12,11 +12,8 @@ export function CartContextProvider(props) {
   };
   const deleteProductFromCart = (idProduct) => {
     setCart(
-      cart.filter((cartItem) => {
-        cartItem.product.id !== idProduct;
-      })
-    );
-  };
+      cart.filter( (cartItem) => cartItem.product.id !== idProduct )
+    )}
   return (
     <CartContext.Provider
       value={{
