@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-
+//TODO: cambiar boton close me y'all por icono de x
 export function FlashMessage({show, turn, productTitle, qty}) {
   return (
     <>

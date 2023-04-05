@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import {FlashMessage} from './FlashMessage';
 // TODO: arreglar q la descripcion no se vea taaan larga 
+// TODO: si se va a agregar un producto repetido al carrito ver si se le suma la cantidad al q ya estaba 
 function SingleProduct() {
   const [showFlash, setShowFlash] = useState(false);
   const [qty, setQty] = useState(0);
@@ -19,10 +20,7 @@ function SingleProduct() {
       qty,
       product
     }
-    console.log(cartItem)
-    console.log(cart)
     addProductToCart(cartItem)
-    console.log(cart)
     setShowFlash(true)
   };
   return (
