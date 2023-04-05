@@ -1,19 +1,17 @@
+import { Link } from "react-router-dom";
+
+
 function ProductCard({ product }) {
-
-  const handleClick = () => {
-      console.log('epale sans', product.title);
-  }
-
   return (
     <article className="col-12 col-md-5 col-lg-3 d-flex flex-column p-2 mb-3 ProductCard">
-      <div onClick={handleClick}>
-        <a href={`/shop/product/${product.id}`}>
+      <div>
+        <Link to={`/shop/product/${product.id}`}>
           <img
             src={product.image}
             alt={product.title}
             className="TopChoicesImg"
           />
-        </a>
+        </Link>
       </div>
       <div className="p-3 d-flex flex-column ProductCardText ">
         <h3>
@@ -23,7 +21,7 @@ function ProductCard({ product }) {
             .toUpperCase()}${product.category.slice(1)}`}</span>
         </h3>
         <p className="text-muted">${product.price}</p>
-        <a className="btn" href={`/shop/product/${product.id}`}>SHOP NOW</a>
+        <Link to={`/shop/product/${product.id}`} className='btn'>SHOP NOW</Link>
       </div>
     </article>
   );

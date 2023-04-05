@@ -24,6 +24,7 @@ export const Contact = () => {
               className="form-control"
             ></textarea>
           </label>
+          <button className="btn btn-outline-warning w-75 mt-2">Enviar</button>
         </form>
       </main>
       <Footer />

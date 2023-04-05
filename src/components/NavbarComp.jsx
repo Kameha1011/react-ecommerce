@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { FiShoppingCart } from "react-icons/fi";
-import { Link, Form } from "react-router-dom";
+import { Link} from "react-router-dom";
 import axios from "axios";
+import { CartContext } from "../context/CartContext";
 
 
 
@@ -29,7 +30,7 @@ export const NavbarComp = () => {
     };
     getCategories();
   }, []);
- 
+ const {cart, deleteProductFromCart } = useContext(CartContext)
   return (
     <Navbar collapseOnSelect variant="light" expand="lg">
       <Container>
@@ -47,8 +48,7 @@ export const NavbarComp = () => {
                   </NavDropdown.Item>
               )}
             </NavDropdown>
-            <Nav.Link href="#link">Contact Us</Nav.Link>
-            <Nav.Link href="#">About Us</Nav.Link>
+            <Link to={'/contact'} className="nav-link">Contact Us</Link>
           </Nav>
           <Nav.Link onClick={handleShow}>
             <FiShoppingCart />
@@ -61,7 +61,14 @@ export const NavbarComp = () => {
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <p className="mb-0">There are no items on your cart brah.</p>
+          {cart.map((cartItem) =>
+            <div key={cartItem.product.id}>
+            <p>{cartItem.product.title} ({cartItem.qty})</p>
+            <button className="btn btn-danger">Delete</button>
+          </div>
+          )}
+          
+
         </Offcanvas.Body>
       </Offcanvas>
     </Navbar>

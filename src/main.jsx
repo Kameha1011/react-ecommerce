@@ -8,6 +8,7 @@ import ProductsContainer from "./components/ProductsContainer";
 import axios from "axios";
 import SingleProduct from "./components/SingleProduct";
 import { Contact } from "./routes/Contact/Contact";
+import { CartContextProvider } from "./context/CartContext";
 
 const router = createBrowserRouter([
   {
@@ -53,13 +54,15 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:'/contact',
-    element: <Contact/>
-  }
+    path: "/contact",
+    element: <Contact />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );
