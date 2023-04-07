@@ -9,7 +9,6 @@ export const Checkout = () => {
   return (
     <>
       <NavbarComp />
-      <h1>{JSON.stringify(cart)}</h1>
       <main className="container min-vh-100">
         <h2 className="display-1 pt-5">Checkout</h2>
         <div className="d-flex flex-column flex-lg-row gap-2">
