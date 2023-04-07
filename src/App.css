@@ -1,133 +1,146 @@
-#root{
-    min-height: 100vh;
+#root {
+  min-height: 100vh;
 }
 .contactContainer {
-    min-height: 60vh;
+  min-height: 60vh;
 }
-nav{
-    background-color: rgba(218, 165, 32);
-    font-size: 1.5rem;
+nav {
+  background-color: rgba(218, 165, 32);
+  font-size: 1.5rem;
 }
-#basic-navbar-nav .navbar-nav-scroll{
-    max-height: 150px;
+#basic-navbar-nav .navbar-nav-scroll {
+  max-height: 150px;
 }
-nav .dropdown-menu{
-    background-color: #514949;
+nav .dropdown-menu {
+  background-color: #514949;
 }
-nav .dropdown-item{
-    color: #fff;
+nav .dropdown-item {
+  color: #fff;
 }
-header{
-    height: 70vh;
+header {
+  height: 70vh;
 }
-.carousel-inner{
-    height: 100%;
+.carousel-inner {
+  height: 100%;
 }
-.carousel-inner img{
-    object-position: right;
+.carousel-inner img {
+  object-position: right;
 }
-.carousel-inner .carousel-caption{
-    bottom: 3rem;
+.carousel-inner .carousel-caption {
+  bottom: 3rem;
 }
-.carousel-inner .carousel-caption h1{
-    font-size: 4rem;
-    letter-spacing: .2rem;
+.carousel-inner .carousel-caption h1 {
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
 }
-.TopChoicesHeading{
-    padding: 1rem;
-    border-bottom: 2px solid #514949;
+.TopChoicesHeading {
+  padding: 1rem;
+  border-bottom: 2px solid #514949;
 }
-.TopChoicesHeading p:nth-child(1){
-    color: rgba(218, 165, 32);
+.TopChoicesHeading p:nth-child(1) {
+  color: rgba(218, 165, 32);
 }
-.ProductCardText{
-    min-height: 20rem;
+.ProductCardText {
+  min-height: 20rem;
 }
-.ProductCard{
-    background-color: rgba(218, 165, 32);
-    height: fit-content;
-    border-radius: .7rem;
-    min-height: 25rem;
-    min-width: 20rem;
+.ProductCard {
+  background-color: rgba(218, 165, 32);
+  height: fit-content;
+  border-radius: 0.7rem;
+  min-height: 36rem;
+  min-width: 20rem;
 }
-.ProductCard .btn, .ProductCard .btn:hover{
-    width: 100%;
-    border: 1px solid #514949;
+.ProductCard .btn,
+.ProductCard .btn:hover {
+  width: 100%;
+  border: 1px solid #514949;
 }
-.SingleProductContainer .btn, .SingleProductContainer .btn:hover{
-    background-color: #fff;
+.SingleProductContainer .btn,
+.SingleProductContainer .btn:hover {
+  background-color: #fff;
 }
-.ProductCard .btn:hover, .SingleProductContainer .btn:hover{
-    background-color: rgb(248, 202, 85);
+.ProductCard .btn:hover,
+.SingleProductContainer .btn:hover {
+  background-color: rgb(248, 202, 85);
 }
-.ProductCard img{
-    border: 3px solid #514949;
-    height: 20rem;
+.ProductCard img {
+  border: 3px solid #514949;
+  height: 20rem;
 }
 
-.TopChoicesImg{
-    width: 100%;
-    max-height: 22rem;
+.TopChoicesImg {
+  width: 100%;
+  max-height: 22rem;
 }
-#TopSalesContainer{
-    background-color: #c3c3c39e;
-    background-image: url('./assets/salesBg.jpg');
-    background-position: center;
-    background-size: 80% 100%;
-    background-repeat: no-repeat;
-    min-height: 80vh;
+#TopSalesContainer {
+  background-color: #c3c3c39e;
+  background-image: url("./assets/salesBg.jpg");
+  background-position: center;
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+  min-height: 80vh;
 }
-#TopSalesContainer small{
-    font-size: .7rem;
+#TopSalesContainer small {
+  font-size: 0.7rem;
 }
 #TopSalesContainer .discount {
-    font-size: 7rem;
+  font-size: 7rem;
 }
-#TopSalesContainer .btn, footer .btn {
-    background-color: #514949;
-    letter-spacing: .3rem;
-    color: rgba(218, 165, 32);
+#TopSalesContainer .btn,
+footer .btn {
+  background-color: #514949;
+  letter-spacing: 0.3rem;
+  color: rgba(218, 165, 32);
 }
-#TopSalesContainer .btn:hover, footer .btn:hover {
-    background-color: #c3c3c39e;
-    color: black;
+#TopSalesContainer .btn:hover,
+footer .btn:hover {
+  background-color: #c3c3c39e;
+  color: black;
 }
-footer{
-    background-color: rgba(218, 165, 32);
+footer {
+  background-color: rgba(218, 165, 32);
 }
-.SingleProductImg{
-    max-height: 30rem;
+.SingleProductImg {
+  max-height: 30rem;
 }
 .SingleProductContainer article div {
-    background-color: #c3c3c39e;
+  background-color: #c3c3c39e;
 }
-@media(min-width: 768px){
-    header{
-        height: 60vh;
-    }
-    .carousel-inner .carousel-caption{
-        max-width: 20rem;
-        left: 50%;
-        bottom: 15rem;
-    }
-    .carousel-inner .carousel-caption h1{
-        font-size: 5rem;
-        letter-spacing: .5rem;
-    }
-    .SingleProductImg{
-        min-width: 40rem;
-    }
-    
+#checkoutForm .form-control,
+#checkoutForm .form-select,
+#checkoutForm .form-control:focus,
+#checkoutForm .form-control:focus-visible {
+  border: none;
+  border-bottom: 1px solid rgba(218, 165, 32);
+  outline: none;
+  box-shadow: none;
 }
-@media(min-width: 1024px){
-    header{
-        height: 90vh;
-    }
- 
-    .help{
-        border-right: 1px solid black;
-    }
-    .SingleProductContainer article div {
-        width: 40%;
-    }
+@media (min-width: 768px) {
+  header {
+    height: 60vh;
+  }
+  .carousel-inner .carousel-caption {
+    max-width: 20rem;
+    left: 50%;
+    bottom: 15rem;
+  }
+  .carousel-inner .carousel-caption h1 {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+  }
+  .SingleProductImg {
+    min-width: 40rem;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    height: 90vh;
+  }
+
+  .help {
+    border-right: 1px solid black;
+  }
+  .SingleProductContainer article div {
+    width: 40%;
+  }
 }

@@ -9,6 +9,7 @@ import axios from "axios";
 import SingleProduct from "./components/SingleProduct";
 import { Contact } from "./routes/Contact/Contact";
 import { CartContextProvider } from "./context/CartContext";
+import { Checkout } from "./routes/Checkout/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
         },
       },
     ],
+  },
+  {
+    path:"/checkout",
+    element:<Checkout/>,
+    errorElement: <Error />
   },
   {
     path: "/contact",

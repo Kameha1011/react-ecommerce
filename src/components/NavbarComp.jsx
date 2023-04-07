@@ -66,6 +66,7 @@ export const NavbarComp = () => {
       <Offcanvas show={show} onHide={handleClose} placement={"end"} className='bg-dark text-light'>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Your Cart</Offcanvas.Title>
+          {cart.length > 0 && <Link to='/checkout' className="btn btn-outline-light">Go to checkout</Link>}
         </Offcanvas.Header>
         <Offcanvas.Body>
           {!cart.length && <h2>There are no products on your cart...</h2>}
