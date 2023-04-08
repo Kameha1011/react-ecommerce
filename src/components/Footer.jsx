@@ -1,7 +1,7 @@
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs"
 function Footer() {
   return (
-    <footer className="py-5 container-fluid ">
+    <footer className="py-5 container-fluid">
       <div className="row">
         <div className="col-6 col-md-2 mb-3">
           <h5>Section</h5>
@@ -39,7 +39,7 @@ function Footer() {
       </div>
   
       <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
         <ul className="list-unstyled d-flex">
           <li className="ms-3"><a className="link-dark" href="#"><BsTwitter/></a></li>
           <li className="ms-3"><a className="link-dark" href="#"><BsInstagram/></a></li>
