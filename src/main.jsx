@@ -23,6 +23,22 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
+        path: "/shop/allProducts",
+        element: <ProductsContainer />,
+        loader: async () => {
+          try {
+            return await axios
+              .get(
+                `https://fakestoreapi.com/products`
+              )
+              .then((response) => response.data);
+          } catch (error) {
+            console.log(error);
+            return null;
+          }
+        },
+      },
+      {
         path: "/shop/category/:categoryId",
         element: <ProductsContainer />,
         loader: async ({ params }) => {
@@ -55,9 +71,9 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:"/checkout",
-    element:<Checkout/>,
-    errorElement: <Error />
+    path: "/checkout",
+    element: <Checkout />,
+    errorElement: <Error />,
   },
   {
     path: "/contact",

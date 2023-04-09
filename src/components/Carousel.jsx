@@ -2,6 +2,7 @@ import slide1 from "../assets/carousel/slide1.jpg";
 import slide2 from "../assets/carousel/slide2.jpg";
 import slide3 from "../assets/carousel/slide3.jpg";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -20,9 +21,9 @@ function Header() {
           />
           <Carousel.Caption className="text-end me-2">
             <h1 className=" mb-3 display-1 fw-bold ">Gold Chains</h1>
-            <a href="#" className="btn btnCarousel">
+            <Link to='/shop/allProducts' className="btn btnCarousel">
               Ver productos
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="h-100">
@@ -33,9 +34,9 @@ function Header() {
           />
           <Carousel.Caption className="text-end me-2">
             <h1 className=" mb-3 display-1 fw-bold ">Gold Chains</h1>
-            <a href="#" className="btn btnCarousel">
+            <Link to='/shop/allProducts' className="btn btnCarousel">
               Ver productos
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className="h-100">
@@ -46,9 +47,9 @@ function Header() {
           />
           <Carousel.Caption className="text-end me-2">
             <h1 className=" mb-3 display-1 fw-bold ">Gold Chains</h1>
-            <a href="#" className="btn btnCarousel">
+            <Link to='/shop/allProducts' className="btn btnCarousel">
               Ver productos
-            </a>
+            </Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
