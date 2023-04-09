@@ -6,7 +6,7 @@ function Shop() {
  
   return (
     <>
-      <NavbarComp />
+      <NavbarComp transparent={false} />
       <main className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
         <Outlet />
       </main>

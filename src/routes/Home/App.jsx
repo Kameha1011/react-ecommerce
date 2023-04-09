@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-        <NavbarComp/>
+        <NavbarComp transparent={true}/>
         <Carousel/>
         <main>
           <TopChoices/>

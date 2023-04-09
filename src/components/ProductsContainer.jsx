@@ -19,19 +19,19 @@ function ProductsContainer() {
   };
 
   return (
-    <section>
-      <form className="d-flex mx-auto mt-5 w-50" onSubmit={handleSubmit}>
+    <section className="mt-5">
+      <form className="d-flex mx-auto mt-5 w-50 " onSubmit={handleSubmit}>
         <input
           type="search"
           placeholder="Search Products by name..."
-          className="me-2 form-control"
+          className="me-2  searchInput"
           name="search"
           onChange={e => setTitle(e.target.value)}
           value={title}
           id="search"
           aria-label="Search"
         />
-        <button className="btn btn-outline-success">Search</button>
+        <button className="searchInputBtn">Search</button>
       </form>
       <section className="container-fluid d-flex flex-wrap gap-5 justify-content-center pt-5 w-75">
         {products.map((product, i) => (

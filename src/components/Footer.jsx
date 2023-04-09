@@ -6,22 +6,22 @@ function Footer() {
         <div className="col-6 col-md-2 mb-3">
           <h5>Section</h5>
           <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Home</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Features</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Pricing</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">FAQs</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">About</a></li>
           </ul>
         </div>
   
         <div className="col-6 col-md-2 mb-3">
           <h5>Section</h5>
           <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Home</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Features</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Pricing</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">FAQs</a></li>
+            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">About</a></li>
           </ul>
         </div>
   
@@ -39,11 +39,11 @@ function Footer() {
       </div>
   
       <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+        <p>&copy; 2023 Shiro Company All rights reserved.</p>
         <ul className="list-unstyled d-flex">
-          <li className="ms-3"><a className="link-dark" href="#"><BsTwitter/></a></li>
-          <li className="ms-3"><a className="link-dark" href="#"><BsInstagram/></a></li>
-          <li className="ms-3"><a className="link-dark" href="#"><BsFacebook/></a></li>
+          <li className="ms-3"><a href="https://twitter.com/company_shiro" target='_blank'><BsTwitter/></a></li>
+          <li className="ms-3"><a href="https://www.instagram.com/shirocompany2001/" target='_blank'><BsInstagram/></a></li>
+          <li className="ms-3"><a href="https://www.facebook.com/shirocompany2001" target='_blank'><BsFacebook/></a></li>
         </ul>
       </div>
     </footer>

@@ -10,7 +10,7 @@ import axios from "axios";
 import { CartContext } from "../context/CartContext";
 // TODO: separar el offcanvas a su propio componente
 
-export const NavbarComp = () => {
+export const NavbarComp = ({transparent}) => {
   const [show, setShow] = useState(false);
   const [categories, setCategories] = useState([]);
   const handleClose = () => setShow(false);
@@ -30,14 +30,13 @@ export const NavbarComp = () => {
     getCategories();
   }, []);
   const { cart, deleteProductFromCart } = useContext(CartContext);
-
   return (
-    <Navbar collapseOnSelect variant="light" expand="lg">
+    <Navbar collapseOnSelect variant="light" expand="lg" className={`w-100 ${transparent && 'transparent'}`}>
       <Container>
         <Navbar.Brand href="#home">Store logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav navbarScroll className="mx-auto">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav navbarScroll>
             <Link to={"/"} className="nav-link">
               Home
             </Link>

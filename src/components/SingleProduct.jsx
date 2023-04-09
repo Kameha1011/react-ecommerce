@@ -6,7 +6,7 @@ import {FlashMessage} from './FlashMessage';
 // TODO: si se va a agregar un producto repetido al carrito ver si se le suma la cantidad al q ya estaba 
 function SingleProduct() {
   const [showFlash, setShowFlash] = useState(false);
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const data = useLoaderData();
   const [product, setProduct] = useState({});
   useEffect(() => {
@@ -24,7 +24,7 @@ function SingleProduct() {
     setShowFlash(true)
   };
   return (
-    <section className="SingleProductContainer px-4">
+    <section className="SingleProductContainer positon-relative px-4">
       <FlashMessage show={showFlash} turn={setShowFlash} productTitle={product.title} qty={qty}/>
       <article className="d-flex gap-2 flex-wrap justify-content-center">
         <img
@@ -35,8 +35,8 @@ function SingleProduct() {
 
         <div className="p-2 p-md-5">
           <h2>{product.title}</h2>
-          <p className="text-secondary">{product.price}$</p>
-          <p className="lead">{product.description}</p>
+          <p className="price fs-1">{product.price}$</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at minima corporis iure in veritatis esse necessitatibus iusto consequuntur nostrum iste aliquam quibusdam, ratione molestiae quod porro, consectetur delectus vero!</p>
           <form onSubmit={handleSubmit}>
             <input
               type="number"
@@ -51,6 +51,11 @@ function SingleProduct() {
             </button>
           </form>
         </div>
+        <div className="w-100 mb-5 mt-3 text-center p-3 border-top border-dark text-dark">
+          <h2>Description</h2>
+          <p className="lead">{product.description}</p>
+        </div>
+        
       </article>
     </section>
   );

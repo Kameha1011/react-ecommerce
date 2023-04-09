@@ -8,8 +8,8 @@ export const Checkout = () => {
 
   return (
     <>
-      <NavbarComp />
-      <main className="container min-vh-100">
+      <NavbarComp transparent={false} />
+      <main className="container checkoutContainer pt-5">
         <h2 className="display-1 pt-5">Checkout</h2>
         <div className="d-flex flex-column flex-lg-row gap-2">
           <form className="border-top border-warning p-3" id="checkoutForm">
