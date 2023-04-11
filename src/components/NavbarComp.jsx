@@ -1,13 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { CartContext } from "../context/CartContext";
+import { SideCart } from "./SideCart";
 // TODO: separar el offcanvas a su propio componente
 
 export const NavbarComp = ({transparent}) => {
@@ -29,7 +28,6 @@ export const NavbarComp = ({transparent}) => {
     };
     getCategories();
   }, []);
-  const { cart, deleteProductFromCart } = useContext(CartContext);
   return (
     <Navbar collapseOnSelect variant="light" expand="lg" className={`w-100 ${transparent && 'transparent'}`}>
       <Container>
@@ -62,30 +60,7 @@ export const NavbarComp = ({transparent}) => {
         </Navbar.Collapse>
       </Container>
 
-      <Offcanvas show={show} onHide={handleClose} placement={"end"} className='bg-dark text-light'>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Your Cart</Offcanvas.Title>
-          {cart.length > 0 && <Link to='/checkout' className="btn btn-outline-light">Go to checkout</Link>}
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          {!cart.length && <h2>There are no products on your cart...</h2>}
-          {cart.map((cartItem, index) => (
-            <div key={index} className={`${(index % 2 == 0) && 'bg-secondary'} p-2 mb-2` }>
-              <p>
-                {cartItem.product.title} (x{cartItem.qty})
-              </p>
-              <button
-                className="btn btn-danger"
-                onClick={() => {
-                  deleteProductFromCart(cartItem.product.id);
-                }}
-              >
-                Delete
-              </button>
-            </div>
-          ))}
-        </Offcanvas.Body>
-      </Offcanvas>
+        <SideCart show={show} handleClose={handleClose} />            
     </Navbar>
   );
 };
