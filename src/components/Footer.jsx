@@ -1,30 +1,17 @@
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs"
+import { Link } from "react-router-dom"
 function Footer() {
   return (
     <footer className="py-5 container-fluid">
       <div className="row">
         <div className="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
+          <h5>Sections</h5>
           <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">About</a></li>
+            <li className="nav-item mb-2"><Link to={'/'} className="nav-link p-0">Home</Link></li>
+            <li className="nav-item mb-2"><Link to={'/shop/allProducts'} className="nav-link p-0">Shop</Link></li>
+            <li className="nav-item mb-2"><Link to={'/contact'} className="nav-link p-0">Contact</Link></li>
           </ul>
-        </div>
-  
-        <div className="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
-          <ul className="nav flex-column">
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Home</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Features</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">Pricing</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">FAQs</a></li>
-            <li className="nav-item mb-2"><a href="#" className="nav-link p-0">About</a></li>
-          </ul>
-        </div>
-  
+        </div>  
         <div className="col-md-5 offset-md-1 mb-3">
           <form>
             <h5>Subscribe to our newsletter</h5>
