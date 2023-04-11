@@ -35,7 +35,7 @@ export const Checkout = () => {
               <label className="col-12 col-md-8 mb-2">
                 Country<sup>*</sup>
                 <select name="country" id="country" className="form-select">
-                  <option selected> Choose a country </option>
+                  <option defaultValue> Choose a country </option>
                   <option value="Argentina">Argentina</option>
                   <option value="Paraguay">Paraguay</option>
                 </select>
@@ -114,7 +114,7 @@ export const Checkout = () => {
             </div>
           </form>
           <section className="border-secondary p-3">
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Qty</th>
