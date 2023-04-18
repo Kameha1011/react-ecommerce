@@ -189,13 +189,14 @@ footer .form-control::placeholder {
   color: #f2eb85;
 }
 .SingleProductImg {
+  width: 50%;
   max-height: 30rem;
 }
 .SingleProductContainer{
-  margin-top: 10rem;
+  margin-top: 5rem;
   color: #f2f2f2;
 }
-.SingleProductContainer div:nth-of-type(1){
+.SingleProductContainer .ProductDescription{
   background-color: #63a680;
   box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.75);

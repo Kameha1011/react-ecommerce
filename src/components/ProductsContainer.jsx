@@ -19,8 +19,8 @@ function ProductsContainer() {
   };
 
   return (
-    <section className="mt-5">
-      <form className="d-flex mx-auto mt-5 w-50 " onSubmit={handleSubmit}>
+    <section className="row justify-content-center mt-5 gx-0">
+      <form className="col-10 col-md-8 d-flex mx-auto mt-5" onSubmit={handleSubmit}>
         <input
           type="search"
           placeholder="Search Products by name..."
@@ -33,7 +33,7 @@ function ProductsContainer() {
         />
         <button className="searchInputBtn">Search</button>
       </form>
-      <section className="container-fluid d-flex flex-wrap gap-5 justify-content-center pt-5 w-75">
+      <section className="col-12 col-lg-10 d-flex flex-wrap gap-5 justify-content-center pt-5">
         {products.map((product, i) => (
           <ProductCard product={product} key={i} />
         ))}
